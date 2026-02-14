@@ -6,6 +6,9 @@ let isMusicPlaying = false;
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
+    // Attempt to autoplay music on page load
+    playMusic();
+
     // Setup Music Control
     if (musicBtn) {
         musicBtn.addEventListener('click', toggleMusic);
