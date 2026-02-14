@@ -375,6 +375,10 @@ body {
 
 /* Media Queries */
 @media (max-width: 550px) {
+    body {
+        padding: 0; /* Maximize screen space on mobile */
+    }
+
     .book-container {
         height: 100vh;
         max-width: 100%;
@@ -383,6 +387,16 @@ body {
 
     .page {
         padding: 30px 20px;
+    }
+
+    /* Ensure content is above the stamp and scrollable if needed */
+    .page-content {
+        position: relative;
+        z-index: 10;
+        overflow-y: auto;
+        min-height: 0; /* Allow shrinking to show scrollbar */
+        justify-content: flex-start;
+        padding-bottom: 20px;
     }
 
     .main-title {
@@ -403,10 +417,27 @@ body {
 
     .photo-container.full-photo {
         max-width: 80%;
+        position: relative;
+        z-index: 10; /* Ensure photo is above stamp */
     }
 
     .music-btn {
+        top: 15px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    /* Make stamp a subtle watermark on mobile */
+    .stamp {
+        width: 60px;
+        height: 60px;
+        font-size: 0.8rem;
         top: 10px;
         right: 10px;
+        opacity: 0.3 !important; /* Subtle but visible */
+        z-index: 0; /* Behind everything */
+        border-width: 1px;
     }
 }
