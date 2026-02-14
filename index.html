@@ -11,6 +11,17 @@
 </head>
 <body>
 
+    <!-- Música de fondo (hidden player) -->
+    <audio id="bg-music" loop>
+        <source src="audio/song.wav" type="audio/wav">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <!-- Botón Mute/Unmute -->
+    <button id="music-control" class="music-btn" title="Silenciar / Activar sonido">
+        ♫
+    </button>
+
     <div class="book-container">
         <!-- Portada -->
         <section id="cover" class="page active">
@@ -20,7 +31,7 @@
                 <div class="illustration-cover">
                     <img src="img/cover.png" alt="Portada Herbario">
                 </div>
-                <button class="btn-start" onclick="nextPage()">Abrir Herbario</button>
+                <button class="btn-start" onclick="startExperience()">Abrir Herbario</button>
             </div>
         </section>
 

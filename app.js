@@ -1,8 +1,17 @@
 const pages = ['cover', 'page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8'];
 let currentPageIndex = 0;
+const music = document.getElementById('bg-music');
+const musicBtn = document.getElementById('music-control');
+let isMusicPlaying = false;
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
+    // Setup Music Control
+    if (musicBtn) {
+        musicBtn.addEventListener('click', toggleMusic);
+        updateMusicIcon(); // Initial state (muted/stopped)
+    }
+
     // Ensure only the first page is active initially
     pages.forEach((pageId, index) => {
         const pageElement = document.getElementById(pageId);
@@ -38,6 +47,44 @@ function updateUI() {
             progress = (currentPageIndex / (pages.length - 1)) * 100;
         }
         progressBar.style.width = `${progress}%`;
+    }
+}
+
+function startExperience() {
+    // Try to play music on first interaction
+    playMusic();
+    nextPage();
+}
+
+function playMusic() {
+    if (music) {
+        music.volume = 0.5; // Set volume to 50%
+        music.play().then(() => {
+            isMusicPlaying = true;
+            updateMusicIcon();
+        }).catch(error => {
+            console.log("Audio play failed (user interaction needed):", error);
+        });
+    }
+}
+
+function toggleMusic() {
+    if (music) {
+        if (music.paused) {
+            music.play();
+            isMusicPlaying = true;
+        } else {
+            music.pause();
+            isMusicPlaying = false;
+        }
+        updateMusicIcon();
+    }
+}
+
+function updateMusicIcon() {
+    if (musicBtn) {
+        musicBtn.textContent = isMusicPlaying ? "♫" : "✕"; // Simple text icons or use SVG
+        musicBtn.style.opacity = isMusicPlaying ? "1" : "0.5";
     }
 }
 

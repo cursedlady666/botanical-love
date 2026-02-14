@@ -1,0 +1,13 @@
+127.0.0.1 - - [14/Feb/2026 06:16:41] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [14/Feb/2026 06:16:41] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [14/Feb/2026 06:16:41] "GET /img/cover.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Feb/2026 06:16:41] "GET /img/page1.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Feb/2026 06:16:41] "GET /img/page2.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Feb/2026 06:16:41] "GET /img/page4.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Feb/2026 06:16:41] "GET /img/page3.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Feb/2026 06:16:41] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [14/Feb/2026 06:16:41] "GET /img/page5.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Feb/2026 06:16:41] "GET /img/page6.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Feb/2026 06:16:41] "GET /img/page7.png HTTP/1.1" 200 -
+127.0.0.1 - - [14/Feb/2026 06:16:41] "GET /img/twins.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [14/Feb/2026 06:16:42] "GET /audio/song.wav HTTP/1.1" 200 -
