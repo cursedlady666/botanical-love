@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbario de la misma raíz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="book-container">
+        <!-- Portada -->
+        <section id="cover" class="page active">
+            <div class="page-content center-content">
+                <h1 class="main-title">Herbario de la misma raíz</h1>
+                <h2 class="subtitle">7 hojas para mi mellizo</h2>
+                <div class="illustration-cover">
+                    <img src="img/cover.png" alt="Portada Herbario">
+                </div>
+                <button class="btn-start" onclick="nextPage()">Abrir Herbario</button>
+            </div>
+        </section>
+
+        <!-- Hoja 1 -->
+        <section id="page1" class="page">
+            <div class="stamp">Hoja I</div>
+            <div class="page-content">
+                <div class="page-header">
+                    <h3>Hoja 1</h3>
+                    <h4>Semillas: nuestra infancia</h4>
+                </div>
+                <div class="illustration">
+                    <img src="img/page1.png" alt="Semillas">
+                </div>
+                <div class="text-block">
+                    <p>A veces pienso que la infancia fue nuestro primer pacto silencioso.</p>
+                    <p>Tú estabas ahí — antes de que el mundo se complicara — como si ya supieras que la vida se vive mejor acompañado.</p>
+                </div>
+                <div class="botanical-label">
+                    <span>Specimen: Geminus</span> • <span>Familia: Raíz común</span> • <span>Fecha: 2024</span>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="btn-nav" onclick="prevPage()">Anterior</button>
+                <span class="page-indicator">1 / 7</span>
+                <button class="btn-nav" onclick="nextPage()">Siguiente</button>
+            </div>
+        </section>
+
+        <!-- Hoja 2 -->
+        <section id="page2" class="page">
+            <div class="stamp">Hoja II</div>
+            <div class="page-content">
+                <div class="page-header">
+                    <h3>Hoja 2</h3>
+                    <h4>Códigos que solo tú entiendes</h4>
+                </div>
+                <div class="illustration">
+                    <img src="img/page2.png" alt="Códigos">
+                </div>
+                <div class="text-block">
+                    <p>Hay cosas que no tengo que explicar contigo: una mirada, un silencio, una ironía exacta.</p>
+                    <p>Eres el lugar donde mis rarezas no se defienden: se aceptan.</p>
+                </div>
+                <div class="botanical-label">
+                    <span>Specimen: Geminus</span> • <span>Familia: Raíz común</span> • <span>Fecha: 2024</span>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="btn-nav" onclick="prevPage()">Anterior</button>
+                <span class="page-indicator">2 / 7</span>
+                <button class="btn-nav" onclick="nextPage()">Siguiente</button>
+            </div>
+        </section>
+
+        <!-- Hoja 3 -->
+        <section id="page3" class="page">
+            <div class="stamp">Hoja III</div>
+            <div class="page-content">
+                <div class="page-header">
+                    <h3>Hoja 3</h3>
+                    <h4>Lecciones que me dejaste</h4>
+                </div>
+                <div class="illustration">
+                    <img src="img/page3.png" alt="Lecciones">
+                </div>
+                <div class="text-block">
+                    <p>Contigo aprendí a no rendirme tan rápido, a reírme cuando quiero llorar,</p>
+                    <p>y a recordar que a veces el valor no grita: solo sigue.</p>
+                </div>
+                <div class="botanical-label">
+                    <span>Specimen: Geminus</span> • <span>Familia: Raíz común</span> • <span>Fecha: 2024</span>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="btn-nav" onclick="prevPage()">Anterior</button>
+                <span class="page-indicator">3 / 7</span>
+                <button class="btn-nav" onclick="nextPage()">Siguiente</button>
+            </div>
+        </section>
+
+        <!-- Hoja 4 -->
+        <section id="page4" class="page">
+            <div class="stamp">Hoja IV</div>
+            <div class="page-content">
+                <div class="page-header">
+                    <h3>Hoja 4</h3>
+                    <h4>Lo que admiro de ti</h4>
+                </div>
+                <div class="illustration">
+                    <img src="img/page4.png" alt="Admiración">
+                </div>
+                <div class="text-block">
+                    <p>Admiro cómo sostienes lo tuyo cuando nadie está mirando.</p>
+                    <p>Tu manera de ser constante, aunque el día esté pesado, es una forma silenciosa de grandeza.</p>
+                </div>
+                <div class="botanical-label">
+                    <span>Specimen: Geminus</span> • <span>Familia: Raíz común</span> • <span>Fecha: 2024</span>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="btn-nav" onclick="prevPage()">Anterior</button>
+                <span class="page-indicator">4 / 7</span>
+                <button class="btn-nav" onclick="nextPage()">Siguiente</button>
+            </div>
+        </section>
+
+        <!-- Hoja 5 -->
+        <section id="page5" class="page">
+            <div class="stamp">Hoja V</div>
+            <div class="page-content">
+                <div class="page-header">
+                    <h3>Hoja 5</h3>
+                    <h4>Días difíciles, raíz firme</h4>
+                </div>
+                <div class="illustration">
+                    <img src="img/page5.png" alt="Días difíciles">
+                </div>
+                <div class="text-block">
+                    <p>Hubo días en los que la vida no se sentía amable.</p>
+                    <p>Y aun así, de alguna manera, seguimos. Me da paz saber que, incluso entonces, estabas cerca… aunque fuera desde lejos.</p>
+                </div>
+                <div class="botanical-label">
+                    <span>Specimen: Geminus</span> • <span>Familia: Raíz común</span> • <span>Fecha: 2024</span>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="btn-nav" onclick="prevPage()">Anterior</button>
+                <span class="page-indicator">5 / 7</span>
+                <button class="btn-nav" onclick="nextPage()">Siguiente</button>
+            </div>
+        </section>
+
+        <!-- Hoja 6 -->
+        <section id="page6" class="page">
+            <div class="stamp">Hoja VI</div>
+            <div class="page-content">
+                <div class="page-header">
+                    <h3>Hoja 6</h3>
+                    <h4>Lo que te deseo</h4>
+                </div>
+                <div class="illustration">
+                    <img src="img/page6.png" alt="Deseos">
+                </div>
+                <div class="text-block">
+                    <p>Te deseo calma. Te deseo fuerza sin dureza.</p>
+                    <p>Que la vida te devuelva en oportunidades todo lo que has sostenido en silencio.</p>
+                </div>
+                <div class="botanical-label">
+                    <span>Specimen: Geminus</span> • <span>Familia: Raíz común</span> • <span>Fecha: 2024</span>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="btn-nav" onclick="prevPage()">Anterior</button>
+                <span class="page-indicator">6 / 7</span>
+                <button class="btn-nav" onclick="nextPage()">Siguiente</button>
+            </div>
+        </section>
+
+        <!-- Hoja 7 -->
+        <section id="page7" class="page">
+            <div class="stamp">Hoja VII</div>
+            <div class="page-content">
+                <div class="page-header">
+                    <h3>Hoja 7</h3>
+                    <h4>La misma raíz</h4>
+                </div>
+                <div class="illustration small">
+                    <img src="img/page7.png" alt="Raíz">
+                </div>
+                <div class="photo-container">
+                    <img src="img/twins.jpg" alt="Corbin y Evangelyna">
+                </div>
+                <div class="text-block">
+                    <p>No importa cuántos caminos se abran: yo siempre voy a ser tu gente.</p>
+                    <p>Tu hermana. Tu melliza. La misma raíz.</p>
+                </div>
+                <div class="signature">
+                    <p>— Corbin & Evangelyna Malènovich</p>
+                </div>
+                <div class="botanical-label">
+                    <span>Specimen: Geminus</span> • <span>Familia: Raíz común</span> • <span>Fecha: 2024</span>
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="btn-nav" onclick="prevPage()">Anterior</button>
+                <span class="page-indicator">7 / 7</span>
+                <button class="btn-nav" onclick="restart()">Inicio</button>
+            </div>
+        </section>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
