@@ -1,8 +1,17 @@
-const pages = ['cover', 'page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'];
+const pages = ['cover', 'page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8'];
 let currentPageIndex = 0;
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
+    // Ensure only the first page is active initially
+    pages.forEach((pageId, index) => {
+        const pageElement = document.getElementById(pageId);
+        if (index === 0) {
+            pageElement.classList.add('active');
+        } else {
+            pageElement.classList.remove('active');
+        }
+    });
     updateUI();
 });
 
@@ -12,13 +21,6 @@ function updateUI() {
         const pageElement = document.getElementById(pageId);
         if (index === currentPageIndex) {
             pageElement.classList.add('active');
-
-            // Trigger stamp animation if it exists
-            const stamp = pageElement.querySelector('.stamp');
-            if (stamp) {
-                // Reset animation by removing and re-adding class (optional, but CSS handle entry well)
-                // Actually, CSS transition handles opacity 0->1 when parent gets .active
-            }
         } else {
             pageElement.classList.remove('active');
         }
@@ -27,10 +29,10 @@ function updateUI() {
     // Update progress bar
     const progressBar = document.getElementById('progressBar');
     if (progressBar) {
-        // Calculate progress based on pages 1-7 (excluding cover)
+        // Calculate progress based on content pages (excluding cover)
         // If on cover (index 0), progress is 0.
-        // If on page 1 (index 1), progress is 1/7.
-        // If on page 7 (index 7), progress is 7/7 (100%).
+        // If on page 1 (index 1), progress is 1/8.
+        // If on page 8 (index 8), progress is 8/8 (100%).
         let progress = 0;
         if (currentPageIndex > 0) {
             progress = (currentPageIndex / (pages.length - 1)) * 100;

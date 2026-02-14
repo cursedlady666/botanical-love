@@ -30,7 +30,7 @@ body {
     background-color: var(--color-ivory);
     width: 100%;
     max-width: 500px;
-    min-height: 800px;
+    min-height: 850px; /* Slightly taller for poems */
     position: relative;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     border-radius: 4px;
@@ -54,7 +54,7 @@ body {
     transition: opacity 0.8s ease, transform 0.8s ease;
     transform: translateX(20px);
     z-index: 1;
-    background-color: var(--color-ivory); /* Ensure background covers previous page */
+    background-color: var(--color-ivory);
 }
 
 .page.active {
@@ -131,6 +131,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
+    width: 100%;
 }
 
 .page-header {
@@ -152,73 +153,105 @@ body {
 
 .page-header h4 {
     font-family: var(--font-serif);
-    font-size: 2rem;
+    font-size: 1.8rem; /* Slightly smaller for longer titles */
     color: var(--color-forest);
     font-weight: 400;
+    line-height: 1.2;
 }
 
 .illustration {
-    flex-grow: 1;
+    flex-grow: 0; /* Don't stretch */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 0;
-    max-height: 40%;
+    margin: 10px 0 20px;
+    height: 150px; /* Fixed height for consistency */
 }
 
 .illustration img {
     max-width: 100%;
-    max-height: 250px;
+    max-height: 100%;
     object-fit: contain;
     filter: saturate(0.8) contrast(1.1);
 }
 
 .illustration.small img {
-    max-height: 150px;
+    max-height: 120px;
 }
 
-.photo-container {
-    margin: 10px 0 20px;
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 50%; /* Circle? Or square? Let's go with square with small radius for 'mini photo' feel */
-    border-radius: 4px;
-    border: 1px solid var(--color-sage);
-    padding: 5px;
-    background: white;
-    transform: rotate(-2deg);
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-}
-
-.photo-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.text-block {
+/* Poem Specific Styling */
+.text-block.poem-block {
     text-align: center;
-    max-width: 90%;
-    margin-bottom: 30px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Allow text to take available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.text-block p {
+.poem-block p {
     font-family: var(--font-serif);
-    font-size: 1.3rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem; /* Stanza spacing */
     color: var(--color-ink);
+    font-style: normal; /* Poems often look good normal or italic, keeping normal for readability */
+}
+
+.poem-block p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Final Page (Page 8) Styling */
+.final-page {
+    justify-content: center;
+}
+
+.photo-container.full-photo {
+    margin: 20px 0 30px;
+    width: 100%;
+    max-width: 350px; /* Max width for larger screens */
+    height: auto;
+    aspect-ratio: auto; /* Let image dictate ratio, or 1/1 if square needed */
+    overflow: visible;
+    border-radius: 4px;
+    border: 8px solid white; /* Photo frame style */
+    padding: 0;
+    background: white;
+    transform: rotate(2deg); /* Slight tilt */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.photo-container.full-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Ensure full image is seen */
+}
+
+.valentine-msg {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--color-forest);
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-style: italic;
 }
 
 .signature {
     font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 1.1rem;
-    color: var(--color-forest);
-    margin-top: 20px;
+    font-size: 1.2rem;
+    color: var(--color-ink); /* Darker for readability */
+    margin-top: 10px;
     text-align: center;
+    border-top: 1px solid var(--color-gold);
+    padding-top: 10px;
+    width: 80%;
 }
+
 
 .botanical-label {
     margin-top: auto;
@@ -333,7 +366,15 @@ body {
         font-size: 1.5rem;
     }
 
-    .text-block p {
+    .poem-block p {
         font-size: 1.1rem;
+    }
+
+    .valentine-msg {
+        font-size: 1.5rem;
+    }
+
+    .photo-container.full-photo {
+        max-width: 80%;
     }
 }
